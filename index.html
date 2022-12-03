@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>La Forth du plaisir</title>
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+        <link rel="stylesheet" href="styles/css/style.css" />
+        <script src="scripts/js/index.js" type="module" defer></script>
+    </head>
+    <body>
+        <main class="container">
+            <div class="product__wrapper">
+                <div class="product__sideLeft">
+                    <div class="images__wrapper">
+                        <img src="./images/product/1.jpg" alt="normal-guy" class="image" />
+                        <img src="./images/product/2.jpg" alt="handsome-man" class="image" />
+                        <img src="./images/product/3.png" alt="disguise-duck" class="image" />
+                        <img src="./images/product/4.png" alt="disguise-invisibility" class="image" />
+                    </div>
+                    <div class="thumbs__wrapper">
+                        <img src="./images/thumbnails/1-thumb.png" alt="normal-guy" class="thumb" />
+                        <img src="./images/thumbnails/2-thumb.png" alt="handsome-man" class="thumb" />
+                        <img src="./images/thumbnails/3-thumb.png" alt="disguise-duck" class="thumb" />
+                        <img src="./images/thumbnails/4-thumb.png" alt="disguise-invisibility" class="thumb" />
+                    </div>
+                </div>
+                <div class="product__sideRight">
+                    <header class="product__header">
+                        <h1 class="header__title">Enzo Ustariz</h1>
+                        <div class="header__rating">
+                            <svg class="rating__star star-filled" viewBox="0 0 32 32">
+                                <use xlink:href="#star"></use>
+                            </svg>
+                            <svg class="rating__star star-filled" viewBox="0 0 32 32">
+                                <use xlink:href="#star"></use>
+                            </svg>
+                            <svg class="rating__star star-filled" viewBox="0 0 32 32">
+                                <use xlink:href="#star"></use>
+                            </svg>
+                            <svg class="rating__star star-filled" viewBox="0 0 32 32">
+                                <use xlink:href="#star"></use>
+                            </svg>
+                            <svg class="rating__star star-halfed" viewBox="0 0 32 32">
+                                <use xlink:href="#star"></use>
+                            </svg>
+                        </div>
+                    </header>
+                    <div class="product__price">
+                        <div class="price__label">Prix de base :</div>
+                        <div class="price__base"></div>
+                        <div class="price__promo"></div>
+                    </div>
+                    <div class="product__description">
+                        Enzo saura vous divertir comme nul autre. Il saura coder vos journées comme jamais elles ne
+                        l'ont été. Vous pourrez choisir la tenue dans laquelle vous souhaitez le voir. Que cela soit une
+                        tenue ordinaire ou un déguisement de canard, vous trouverez que sa tenue lui ira aussi bien
+                        qu'un codeur derrière son pc !<br />
+                        Libre à tout moment de la semaine, il sera vous réveiller à l'aide d'une fonction codée avec
+                        passion. N'attendez plus, et choisissez le !
+                    </div>
+                    <form>
+                        <div class="selects__wrapper">
+                            <div class="formElement__wrapper">
+                                <select class="formElement__select" id="select_suits">
+                                    <option value="0">Choisissez la tenue de votre partenaire :</option>
+                                </select>
+                                <div class="formElement__price">
+                                    +<span class="formElement__price-value">0,00&nbsp;€</span>
+                                </div>
+                            </div>
+                            <div class="formElement__wrapper">
+                                <select class="formElement__select" id="select_durations">
+                                    <option value="0">Choisissez la durée :</option>
+                                </select>
+                                <div class="formElement__price">
+                                    +<span class="formElement__price-value">0,00&nbsp;€</span>
+                                </div>
+                            </div>
+                            <div class="formElement__wrapper">
+                                <select class="formElement__select" id="select_activities">
+                                    <option value="0">Choisissez l'activité principale :</option>
+                                </select>
+                                <div class="formElement__price">
+                                    +<span class="formElement__price-value">0,00&nbsp;€</span>
+                                </div>
+                            </div>
+                            <div class="formElement__wrapper">
+                                <div class="formElement__price-label">Montant total :</div>
+                                <div class="formElement__price-value" id="priceTotal"></div>
+                            </div>
+                            <div class="errorElement__wrapper">
+                                <p class="errorElement__message" hidden>Merci de selectionner tous les choix</p>
+                            </div>
+                        </div>
+                        <div class="product__actions">
+                            <div>
+                                <button type="submit" class="button" id="btn_submit">Ajouter au panier</button>
+                            </div>
+                            <div class="socials__wrapper">
+                                <img class="social__icon" src="./images/round/facebook.svg" alt="facebook" />
+                                <img class="social__icon" src="./images/round/instagram.svg" alt="instagram" />
+                                <img class="social__icon" src="./images/round/google-plus.svg" alt="googleplus" />
+                                <img class="social__icon" src="./images/round/hangout.svg" alt="hangout" />
+                                <img class="social__icon" src="./images/round/twitter.svg" alt="twitter" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <div class="notification">
+            <header>
+                <h2>Réservation ajoutée au panier</h2>
+            </header>
+            <main>Un moment de plaisir a été ajouté à votre panier. Accéder au paiement dès maintenant pour en profiter le plus vite possible !</main>
+            <footer>
+                <button class="notification_button">Accéder au panier</button>
+                <button class="notification_button btn__close">Fermer la notification</button>
+            </footer>
+        </div>
+
+        <!-- SVGs -->
+        <svg
+            display="none"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="32px"
+            height="32px"
+            viewBox="0 0 32 32"
+            enable-background="new 0 0 32 32"
+        >
+            <defs>
+                <g id="star">
+                    <polygon
+                        fill="var(--color-1)"
+                        points="11.547,10.918 0,12.118 8.822,19.867 6.127,31.4 16,25.325 16,0.66 	"
+                    ></polygon>
+                    <polygon
+                        fill="var(--color-2)"
+                        points="32,12.118 20.389,10.918 16.026,0.6 16,0.66 16,25.325 16.021,25.312 25.914,31.4 23.266,19.867
+                "
+                    ></polygon>
+                </g>
+            </defs>
+        </svg>
+    </body>
+</html>

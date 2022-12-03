@@ -1,0 +1,32 @@
+@mixin center($justify-content: flex-start) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify-content;
+}
+
+@mixin circle($width) {
+    width: $width * 1px;
+    height: $width * 1px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@mixin scroll-divFix($top) {
+    max-width: 360px;
+    overflow-y: scroll;
+    height: calc(100vh - #{$top});
+    position: sticky;
+    top: $top;
+}
+
+@mixin for-tablet-down {
+    @media (max-width: 980px) {
+        @content;
+    }
+}
+
+@mixin for-phone-only {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
