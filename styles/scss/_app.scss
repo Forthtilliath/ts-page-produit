@@ -297,12 +297,13 @@ body {
 /* Modal Dialog */
 .notification {
     position: fixed;
-    bottom: 1rem;
-    right: 1rem;
+    bottom: 0;
+    right: 0;
     background: $white;
     padding: 1rem;
+    margin: 1rem;
     border-radius: 1rem;
-    width: 450px;
+    max-width: 450px;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
     transition: transform .3s, opacity .3s;
     opacity: 0;
